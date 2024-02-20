@@ -8,3 +8,4 @@ space = " "*(10 - R)
 print(f"[{strg}{space}]")
 quote = "wdwvwqfwfqfwdqqfq"
 print(quote[-2:-1])
+#I need more Code
