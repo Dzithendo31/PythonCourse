@@ -1,3 +1,8 @@
+# Example 1: Basic string slicing
+my_string = "Hello, World!"
+slice_result = my_string[7:12]
+print(slice_result)  # Output: World
+
 # Example 2: Omitting start or stop
 start_slice = my_string[:5]  # Equivalent to my_string[0:5]
 end_slice = my_string[7:]  # Equivalent to my_string[7:len(my_string)]
