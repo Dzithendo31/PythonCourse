@@ -43,4 +43,12 @@ print(tech_gadgets.difference(tech_gadgets2))
 #opposite of Intersection is sysmetric_difference
 print(tech_gadgets.symmetric_difference(tech_gadgets2))
 
-#Quick Tas
+#Quick Task
+colors = ["red", "blue", 'red', "green", "pink", "blue"]
+Set = set()
+Set.update(colors)
+print(Set)
+
+#Easy way
+Unique = set(colors)
+print(Unique)
