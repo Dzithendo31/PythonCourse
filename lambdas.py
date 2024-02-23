@@ -31,3 +31,21 @@ def map_own(fr, arr):
 
 
 print(map_own(lambda x: x * 2, [10, 30, 60]))
+
+
+def sayHello1():
+  def msg():
+    return 'Hello, 🎊'
+  return msg
+
+print(sayHello1()())
+
+#Factory function
+mul = lambda x: lambda y: x * y
+#Example for 5
+mul_5 = mul(5)
+mul_5 = mul(10)
+#Functional Programming
+
+
+print(mul(3)(6))
