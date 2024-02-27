@@ -3,11 +3,11 @@ import re
 # names array
 names = ["John Doe", "Jane Smith", "Alice Johnson", "Chris Evans"]
 # output =
-switched = []
+twist = []
 for name in names:
-  switched.append(re.sub(r'(\w+)\s+(\w+)',r'\2, \1',name))
+  twist.append(re.sub(r'(\w+)\s+(\w+)',r'\2, \1',name))
 
-print(switched)
+print(twist)
 #Regex Credit Card Numbers
 
 
