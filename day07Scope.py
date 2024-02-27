@@ -45,3 +45,15 @@ def fun3(nums=[10]):
 fun3()
 fun3()
 fun3([70])
+
+
+#So noe is a Immutable value-----
+#So we can say also a Tuple = () is immutable
+
+def fun(nums=None):
+    if nums == None:
+        nums = []
+    else:
+        nums.append(10)
+    print(nums)
+    
