@@ -1,23 +1,6 @@
 from datetime import datetime
 
 
-class Car:
-    # add the values
-    def __init__(self, name, engine, doors):
-        self.name = name
-        self.engine = engine
-        self.doors = doors
-
-    def horn(self):
-        return "Helloe Babbi"
-
-
-ferrari = Car("Benx", "V*", 23)
-
-print(ferrari.horn())
-
-
-##Bank Account
 class bankAccount:
     intrestRate = 0.02
     Customer = 0
@@ -62,10 +45,11 @@ class bankAccount:
         return f"Successful, {self.displayBalance(self)}"
 
     def getBankStatement(self):
+        print(self.Name)
         print(f"#  {'id':^6}{'Date':^10}{'Amount':^10}")
         for tran in self.trans:
             print(f"#  {tran['id']:^6}{tran['time']:^10}{tran['amount']:^10}")
-        print(f"\n{'Balance:':#>16}{self.__balance:>10}")
+        print(f"\n{'Balance:':#>16}{self.__balance:>10}\n\n")
 
     def saveTransaction(self, type, amount):
         # Get the time we got
@@ -79,45 +63,73 @@ class bankAccount:
     def applyIntrest(self):
         self.__balance = self.__balance + self.__balance * self.intrestRate
 
+    # get and Sets
+    def getBalance(self):
+        return self.__balance
 
-tina = bankAccount(125674234, "Thina", 153_000)
-tinaX = bankAccount(12567422344, "Thna", 153_000)
-
-# withdraw
-tina.withdraw(3000)
-tina.withdraw(3000)
-tina.getBankStatement()
-tina.applyIntrest()
-tina.getBankStatement()
-print(bankAccount.getTotalAccounts())
+    def updateBalance(self, amount):
+        self.__balance += amount
 
 
-# Types of methods
-# static, not gonna chnage anythiing, just a plain function.
-# classMethod
-#
+# create more
+# Savings Account
+# - More intrest for you
+# - 0.05
+# -
+# Checking Account
+# - Higer intrest Rate
+# - There is a transaction fee
+# - R1 per trans
 
 
-class Circle:
-    pi = 3.14159
+class savingsAccount(bankAccount):
+    intrestRate = 0.05
 
-    def __init__(self, r) -> None:
-        self.r = r
+    # def __init__(self, AccNo, AccHolder, balance):
+    #     super().__init__(AccNo, AccHolder, balance)
 
-    def area(self):
-        return Circle.pi * self.r**2
-
-    @staticmethod
-    def parameter(radius):
-        return 2 * Circle.pi * radius
-
-    @classmethod
-    def from_diameter(cls, d):
-        return cls(d / 10)
+    # def applyIntrest(self):
+    #     self.__balance = self.__balance + self.__balance * savingsAccount.intrestRate
 
 
-# Tresting
-cirle = Circle(2)
-print(cirle.area())
-cirlce2 = Circle.from_diameter(10)
-print(cirlce2.area())
+class checkingAccount(bankAccount):
+    def __init__(self, AccNo, AccHolder, balance):
+        super().__init__(AccNo, AccHolder, balance)
+
+    def withdraw(self, amount):
+        self.chargeFee()
+        return super().withdraw(amount)
+
+    def deposit(self, amount):
+        self.chargeFee()
+        return super().deposit(amount)
+
+    def chargeFee(self):
+        self._bankAccount__balance -= 17
+
+
+def main():
+    tina = bankAccount(125674234, "Thina", 100_000)
+
+    tinaX = savingsAccount(12567422344, "Sara", 100_000)
+
+    tinaXR = checkingAccount(125674223, "John", 100_000)
+    # Task 01
+    tina.applyIntrest()
+    tinaX.applyIntrest()
+    tinaXR.applyIntrest()
+    tina.getBankStatement()
+    tinaXR.getBankStatement()
+    tinaX.getBankStatement()
+
+    # withdraw
+    tina.withdraw(3000)
+    tinaX.withdraw(3000)
+    tinaXR.withdraw(3000)
+    tina.getBankStatement()
+    tinaX.getBankStatement()
+    tinaXR.getBankStatement()
+    print(bankAccount.getTotalAccounts())
+
+
+main()

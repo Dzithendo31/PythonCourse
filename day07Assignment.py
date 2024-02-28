@@ -1,23 +1,3 @@
-from datetime import datetime
-
-
-class Car:
-    # add the values
-    def __init__(self, name, engine, doors):
-        self.name = name
-        self.engine = engine
-        self.doors = doors
-
-    def horn(self):
-        return "Helloe Babbi"
-
-
-ferrari = Car("Benx", "V*", 23)
-
-print(ferrari.horn())
-
-
-##Bank Account
 class bankAccount:
     intrestRate = 0.02
     Customer = 0
@@ -78,46 +58,3 @@ class bankAccount:
 
     def applyIntrest(self):
         self.__balance = self.__balance + self.__balance * self.intrestRate
-
-
-tina = bankAccount(125674234, "Thina", 153_000)
-tinaX = bankAccount(12567422344, "Thna", 153_000)
-
-# withdraw
-tina.withdraw(3000)
-tina.withdraw(3000)
-tina.getBankStatement()
-tina.applyIntrest()
-tina.getBankStatement()
-print(bankAccount.getTotalAccounts())
-
-
-# Types of methods
-# static, not gonna chnage anythiing, just a plain function.
-# classMethod
-#
-
-
-class Circle:
-    pi = 3.14159
-
-    def __init__(self, r) -> None:
-        self.r = r
-
-    def area(self):
-        return Circle.pi * self.r**2
-
-    @staticmethod
-    def parameter(radius):
-        return 2 * Circle.pi * radius
-
-    @classmethod
-    def from_diameter(cls, d):
-        return cls(d / 10)
-
-
-# Tresting
-cirle = Circle(2)
-print(cirle.area())
-cirlce2 = Circle.from_diameter(10)
-print(cirlce2.area())
