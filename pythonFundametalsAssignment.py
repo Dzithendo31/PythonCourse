@@ -105,7 +105,54 @@ booksNew = list(map(lambda booc:booc['title'].upper(),list(filter(lambda book:bo
 print(booksNew)
 
 #Question 10
+#Question 10
+# Setup Code
+# Expected Task: Implement a class with methods for casting spells, reducing health points, and determining the winner.
 
+class WizardDuel:
+    def __init__(self,name) -> None:
+        self.name = name
+        self.__health = 100
+    def decreaseHealth(self,number):
+        self.__health -= number
+
+    @staticmethod
+    def spell1(Wizard):
+        #Spell reduces by 10
+        Wizard.decreaseHealth(10)
+        print(Wizard)
+    @staticmethod
+    def spell2(Wizard):
+        #Spell reduces by 20
+        Wizard.decreaseHealth(20)
+        print(Wizard)
+    @staticmethod
+    def spell3(Wizard):
+        #Spell reduces by 50
+        Wizard.decreaseHealth(50)
+        print(Wizard)
+    def __str__(self) -> str:
+        return f"{self.name} has {self.__health} health left."
+    def checkHealth(self):
+        if self.__health<= 0:
+            return False
+    def won(self):
+        return f"{self.name} wins with {self.__health} health points left."
+    
+#The duel Start
+Harry = WizardDuel('Harry')
+Draco = WizardDuel('Drace')
+print(Harry," ",Harry)
+
+#They start fighting
+Harry.spell1(Draco)
+print(Draco)
+#Darco fight back Twice
+Draco.spell3(Harry)
+Draco.spell3(Harry)
+
+if not(Harry.checkHealth()):
+    print(f"After a duel between Harry and Draco, {Draco.won()}")
 
 
 #Question 11
@@ -143,3 +190,80 @@ for house in house_points:
     houses[house['house']] = houses.get(house['house'],0) + house['points']
 
 print(houses)
+
+
+#Question 14
+class MagicalCreature:
+    def __init__(self):
+        pass
+
+    def sound():
+        return "Made Sound"
+class Dragon(MagicalCreature):
+    def sound():
+        return print("Roar")
+class Unicorn(MagicalCreature):
+    def sound():
+        return print("Neigh")
+
+#Question 15
+# Setup Code
+artifacts = [
+    {"name": "Cloak of Invisibility", "age": 657, "power": 9.5},
+    {"name": "Elder Wand", "age": 1000, "power": 10},
+    {"name": "Resurrection Stone", "age": 800, "power": 7}
+]
+# Expected Task: Sort the artifacts first by age, then by power,
+# using a lambda function.
+sorts = sorted(artifacts,key=lambda x:(x['age'],x['power']))
+print(sorts)
+# Setup Code
+#Question 16
+wizard = {"name": "Albus Dumbledore", "title": "Headmaster", "house": "Gryffindor"}
+# Expected Task: Use an f-string to create a profile string that 
+# includes the wizard's name, title, and house.
+print(f"{wizard['name']}, the {wizard['title']} of {wizard['house']}.")
+# Setup Code
+#Question 17
+adopters = [("Harry", "Phoenix"), ("Hermione", "House Elf")]
+creatures = [("Fawkes", "Phoenix"), ("Dobby", "House Elf"), ("Buckbeak", "Hippogriff")]
+# Expected Task: Use `filter` and `map` to create a list of matches between adopters and creatures
+#Filter the phonenix in the isht and 
+def Filter(adopter,creature):
+    if adopter[1] == creature[1]:
+        return
+#Question 18
+# Setup Code
+ingredients = ["Moonstone", "Silver Dust", "Dragon Blood"]
+potions = ["Enigmatic", "Mystic", "Celestial"]
+# Expected Task: For each pair of ingredients, print out the unique potion they produce.
+count = 1
+for i in ingredients:
+    for j in ingredients:
+        print(f"Combining {i} and {j} produces a {potions[count]} Potion.")
+        count+=1
+
+#Question 19
+# Setup Code
+data = [
+    {"id": 1, "name": "Item 1", "tags": ["tag1", "tag2"]},
+    {"id": 2, "name": "Item 2", "tags": ["tag2", "tag3"]},
+    {"id": 3, "name": "Item 3", "tags": ["tag1", "tag3"]}
+]
+# Expected Task: For each item, add a new tag "tag4" only if "tag1" is present in the tags list.
+
+for d in data:
+    if "tag1" in d['tags']:
+        d['tags'].append("tag4")
+print(data)
+
+#Question 20
+# Setup Code
+tasks = [
+    {"id": 1, "priority": "High", "completed": False},
+    {"id": 2, "priority": "Low", "completed": True},
+    {"id": 3, "priority": "Medium", "completed": False}
+]
+# Expected Task: Sort the tasks by "completed" status (False first) and then by priority ("High", "Medium", "Low").
+tasksSorted = sorted(tasks, key=lambda x: (x["completed"], {"High": 1, "Medium": 2, "Low": 3}[x["priority"]]))
+print(tasksSorted)

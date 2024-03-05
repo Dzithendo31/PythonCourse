@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .box1{
+            background-color: pink;
+            width: 500px;
+            height: 500px;
+            transition: 1s all;
+        }
+        /* Mobile First approach */
+        /* In Mor than 500 width of it should turn red */
+        /* 0-499 this code is ssleeping */
+        @media (min-width:500px) {
+            .box1{
+            background-color: rgb(255, 0, 43);
+
+        }
+        }
+
+        /* It works that wassyyyy */
+        @media (min-width:900px) {
+            .box1{
+            background-color: rgb(255, 0, 234);
+            border-radius: 50%;
+        }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box1">
+      </div>
+</body>
+</html>
