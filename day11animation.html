@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background: plum;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 2s;
+        }
+        .body{
+            margin: 0;
+            display: grid;
+            place-content: center;
+            min-height: 100vh;
+        }
+        .box:hover{
+            transform: scale(3);
+            background: rgb(202, 5, 202);
+            transition: 2s;
+        }
+        /* Click */
+        .box:active{
+            transform: scale(0.5) translateY(-50px);
+        }
+        img{
+            width: 20%;
+            transition: 0.5s all;
+        }
+        img:hover{
+            transform: scale(2) translateY(-20px);
+        }
+        img:active{
+            transform: scale(0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="box">
+        
+        </div>
+        <div class="like">
+                <img src="like-svgrepo-com.svg" alt="">
+            </div>
+    </div>
+    
+</body>
+</html>
