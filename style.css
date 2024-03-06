@@ -1,0 +1,26 @@
+.brand{
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+/* Now we using the unique ID instead of Class */
+p{
+    color: red;
+    /* By defaul no element comes with a border
+     */
+     
+    
+}
+a{
+    text-decoration: none;
+    color: pink;
+}
+
+.container{
+    background-color: skyblue;
+}
+/* Box Model of CSS
+- all elements in css has to follow the model
+ */

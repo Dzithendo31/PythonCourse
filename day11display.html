@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: red;
+            width: 50%;
+        }
+        .web{
+            height: 400px;
+            width: 300px;
+            /* Inline don't respect height and width, but with block they do respect height and width */
+            /* display: block; */
+            /* But if i want things to repsect H and Width but also wants  inline, so hybrid*/
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <a class="web" href="google.com">Gooogle</a>
+    <a class="web" href="google.com">Jesus.com</a>
+    <!-- Block Element, p,h1 - h6 div-->
+    <!-- They occupy the full of the Container -->
+    <p>Helooo</p>
+    <p></p>
+
+    <!-- Inline Elelments -->
+    <a href="">Link 1</a>
+    <a href="">Sui</a>
+    <!-- Convert Inline to block using display:Block -->
+    <!-- Converting the inline to block, just put it in a div -->
+    <div class="container">
+        <p>Hara</p>
+        <p>Lara</p>
+    </div>
+    <!-- Images are quite Tricking, the are actually inline -->
+    <img src="briefcase.png" alt="">
+    <img src="color-pallete.png" alt="">
+    <div></div>
+    <!-- Section -->
+    <a class="web" href="google.com">Gooogle</a>
+</body>
+</html>

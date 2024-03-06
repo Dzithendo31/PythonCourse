@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Roboto&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        width: 15px;
+        height: 15px;
+        padding-right: 3px;
+    }
+    .art{
+        background-color: hsl(206, 100%, 92%);color: #4d9ee0;
+    }
+    .business{
+        background-color: hsl(262, 100%, 91%);color: #380099;
+    }
+    .design{
+        background-color: hsl(326, 100%, 91%);color: #9e005a;
+    }
+    /* Why using the hsl format?? */
+    .art,
+    .business,
+    .design{
+        margin: 3px;
+        /* Border radius and this type of padding are complex properties, they make stuff combinations */
+        border-radius: 15px;
+        padding: 5px 20px;
+        font-family: "Ojuju","Roboto", sans-serif;
+    }
+
+</style>
+<body>
+    <div class="divz" style="display: flex;">
+        <p class="art"> <span><img src="color-pallete.png"></span> Art</p>
+        <p class="business"><span><img src="briefcase.png"></span>Business</p>
+        <p class="design"><span><img src="graphic-design.png"></span>Design</p>
+    </div>
+    
+</body>
+</html>
+
+<!-- Two font families -->
