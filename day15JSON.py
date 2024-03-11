@@ -68,3 +68,9 @@ bank_data_dict = [{**client,"balance":client['balance']*1.1 if client['isActive'
 #Ban to JSon
 bank_data = json.dumps(bank_data_dict,indent=4)
 print(bank_data)
+
+#https://www.youtube.com/watch?v=CZ3wIuvmHeM&ab_channel=InfoQ
+
+#Read and write toa JSON
+with open("day15bank.json","w") as file:
+    json.dump(bank_data,file,indent=4)

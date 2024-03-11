@@ -1,0 +1,39 @@
+{
+    "posts": [
+      {
+        "title": "The Future of AI",
+        "author": "Alice",
+        "published_date": "2024-01-01",
+        "comments": [
+          {
+            "user": "Bob",
+            "comment": "Great post!",
+            "date": "2024-01-02"
+          },
+          {
+            "user": "Charlie",
+            "comment": "Very informative.",
+            "date": "2024-01-03"
+          }
+        ]
+      },
+      {
+        "title": "Learning Python",
+        "author": "Bob",
+        "published_date": "2024-02-15",
+        "comments": [
+          {
+            "user": "Alice",
+            "comment": "Thanks for the tips.",
+            "date": "2024-02-16"
+          }
+        ]
+      },
+      {
+        "title": "Web Development Trends",
+        "author": "Charlie",
+        "published_date": "2024-03-01",
+        "comments": []
+      }
+    ]
+  }
