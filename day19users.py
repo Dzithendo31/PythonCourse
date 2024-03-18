@@ -12,3 +12,7 @@ async def getName():
                 print(perosn['name'])
 
 asyncio.run(getName())
+
+#Multiple aPI at a same time then you can use gather, otherwise Not.
+#Delete and Update
+#
