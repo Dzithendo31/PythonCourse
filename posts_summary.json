@@ -1,0 +1,19 @@
+{
+    "posts_summary": [
+        {
+            "title": "The Future of AI",
+            "author": "Alice",
+            "number_of_comments": 2
+        },
+        {
+            "title": "Learning Python",
+            "author": "Bob",
+            "number_of_comments": 1
+        },
+        {
+            "title": "Web Development Trends",
+            "author": "Charlie",
+            "number_of_comments": 0
+        }
+    ]
+}
